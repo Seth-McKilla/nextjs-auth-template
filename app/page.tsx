@@ -2,10 +2,12 @@
 
 import { signIn } from "next-auth/react";
 
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
     <main>
-      <button onClick={() => signIn()}>Sign In</button>
+      <Button onClick={() => signIn()}>Sign In</Button>
     </main>
   );
 }
