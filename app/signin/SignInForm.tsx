@@ -32,7 +32,9 @@ export default function Home() {
     <div className="flex flex-col">
       <form onSubmit={handleSubmit(onSubmit)} className="flex space-x-1">
         <Input {...register("email")} placeholder="Email" />
-        <Button type="submit">Login</Button>
+        <Button type="submit" className="whitespace-nowrap">
+          Sign in
+        </Button>
       </form>
       {errors.email && (
         <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
