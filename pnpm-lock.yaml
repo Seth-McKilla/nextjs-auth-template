@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hookform/resolvers': 2.9.11
   '@next-auth/mongodb-adapter': 1.1.1
   '@types/node': 18.14.2
   '@types/react': 18.0.28
@@ -18,12 +19,15 @@ specifiers:
   postcss: 8.4.21
   react: 18.2.0
   react-dom: 18.2.0
+  react-hook-form: 7.43.3
   tailwind-merge: 1.10.0
   tailwindcss: 3.2.7
   tailwindcss-animate: 1.0.5
   typescript: 4.9.5
+  zod: 3.20.6
 
 dependencies:
+  '@hookform/resolvers': 2.9.11_react-hook-form@7.43.3
   '@next-auth/mongodb-adapter': 1.1.1_ka7cmjxz2wm2tpnjlunhwpfz5u
   '@types/node': 18.14.2
   '@types/react': 18.0.28
@@ -39,9 +43,11 @@ dependencies:
   nodemailer: 6.9.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.43.3_react@18.2.0
   tailwind-merge: 1.10.0
   tailwindcss-animate: 1.0.5_tailwindcss@3.2.7
   typescript: 4.9.5
+  zod: 3.20.6
 
 devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -77,6 +83,14 @@ packages:
   /@eslint/js/8.35.0:
     resolution: {integrity: sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@hookform/resolvers/2.9.11_react-hook-form@7.43.3:
+    resolution: {integrity: sha512-bA3aZ79UgcHj7tFV7RlgThzwSSHZgvfbt2wprldRkYBcMopdMvHyO17Wwp/twcJasNFischFfS7oz8Katz8DdQ==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.43.3_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -2183,6 +2197,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form/7.43.3_react@18.2.0:
+    resolution: {integrity: sha512-LV6Fixh+hirrl6dXbM78aB6n//82aKbsNbcofF3wc6nx1UJLu3Jj/gsg1E5C9iISnLX+du8VTUyBUz2aCy+H7w==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -2677,4 +2700,8 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zod/3.20.6:
+    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==}
     dev: false

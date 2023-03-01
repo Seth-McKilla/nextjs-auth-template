@@ -1,13 +1,9 @@
-"use client";
-
-import { signIn } from "next-auth/react";
-
-import { Button } from "@/components/ui/button";
+import LoginForm from "./LoginForm";
 
 export default function Home() {
   return (
     <main className="h-screen flex items-center justify-center">
-      <Button onClick={() => signIn()}>Sign In</Button>
+      <LoginForm />
     </main>
   );
 }
