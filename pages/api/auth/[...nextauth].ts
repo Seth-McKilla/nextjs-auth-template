@@ -1,8 +1,10 @@
-import NextAuth, { AuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 
 import clientPromise from "@/lib/mongodb/client";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+
+import type { AuthOptions } from "next-auth";
 
 export const authOptions: AuthOptions = {
   adapter: MongoDBAdapter(clientPromise, {
@@ -17,6 +19,9 @@ export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET!,
   pages: {
     signIn: "/signin",
+  },
+  session: {
+    strategy: "jwt",
   },
 };
 

@@ -2,29 +2,24 @@
 
 import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
-import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { emailSchema } from "@/schemas/common";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-const schema = z.object({
-  email: z.string().email({
-    message: "Please enter a valid email address",
-  }),
-});
-type Schema = z.infer<typeof schema>;
+import type { Email } from "@/schemas/common";
 
 export default function Home() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Schema>({
-    resolver: zodResolver(schema),
+  } = useForm<Email>({
+    resolver: zodResolver(emailSchema),
   });
 
-  const onSubmit = async (data: Schema) => {
+  const onSubmit = async (data: Email) => {
     await signIn("email", { email: data.email });
   };
 
