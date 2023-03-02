@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 import AuthContext from "./AuthContext";
+import Navbar from "./Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <AuthContext>{children}</AuthContext>
+        <AuthContext>
+          <Navbar />
+          <main className="-mt-16">{children}</main>
+        </AuthContext>
       </body>
     </html>
   );

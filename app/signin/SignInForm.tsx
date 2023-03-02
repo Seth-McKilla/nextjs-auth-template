@@ -20,7 +20,7 @@ export default function Home() {
   });
 
   const onSubmit = async (data: Email) => {
-    await signIn("email", { email: data.email });
+    await signIn("email", { email: data.email, callbackUrl: "/" });
   };
 
   return (
